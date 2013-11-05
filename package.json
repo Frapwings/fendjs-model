@@ -1,11 +1,35 @@
 {
-  "name": "model",
-  "version": "0.1.1",
+  "name": "fendjs-model",
+  "version": "0.0.0",
+  "description": "Elegant data models for Fend.js",
   "devDependencies": {
-    "express": "3.0.0"
+    "express": "3.0.0",
+    "component": "~0.18.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/component/model.git"
+    "url": "git://github.com/Frapwings/fendjs-model.git"
+  },
+  "author": "kazupon (kazuya kawaguchi) <k.kawaguchi@frapwings.jp>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Frapwings/fendjs-model/issues"
+  },
+  "keywords": [
+    "collection",
+    "model",
+    "orm",
+    "db",
+    "database"
+  ],
+  "dependencies": {
+    "each-component": "~0.0.1",
+    "fendjs-collection": "~0.0.3",
+    "emitter-component": "~1.0.1",
+    "superagent": "~0.15.7"
+  },
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">= 0.10.0"
   }
 }
