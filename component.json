@@ -2,7 +2,7 @@
   "name": "fendjs-model",
   "repo": "Frapwings/fendjs-model",
   "description": "Elegant data models for Fend.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "keywords": [
     "collection",
     "model",
