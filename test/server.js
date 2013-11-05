@@ -1,14 +1,13 @@
-
 /**
  * Module dependencies.
  */
 
+var fs = require('fs');
 var express = require('express');
 var app = express();
 
 // middleware
 
-app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.static(__dirname));
 app.use(express.static(__dirname + '/..'));
@@ -103,3 +102,4 @@ app.post('/users', function(req, res){
 
 app.listen(4000);
 console.log('test server listening on port 4000');
+fs.writeFileSync(__dirname + '/pid.txt', process.pid, 'utf-8')

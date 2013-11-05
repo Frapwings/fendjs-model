@@ -1,9 +1,8 @@
-
-var model = require('fendjs-model');
+var Model = require('fendjs-model');
 var assert = require('assert');
 var request = require('superagent');
 
-var User = model('User')
+var User = Model('User')
   .attr('id', { type: 'number' })
   .attr('name', { type: 'string' })
   .attr('age', { type: 'number' })
@@ -17,7 +16,7 @@ function required(attr) {
   }
 }
 
-var Pet = model('Pet')
+var Pet = Model('Pet')
   .attr('id')
   .attr('name')
   .attr('species')
@@ -30,9 +29,9 @@ function reset(fn) {
   });
 }
 
-describe('model(name)', function(){
+describe('Model(name)', function(){
   it('should return a new model constructor', function(){
-    var Something = model('Something');
+    var Something = Model('Something');
     assert('function' == typeof Something);
   })
 })
@@ -400,7 +399,7 @@ describe('Model#toJSON()', function(){
 })
 
 describe('Model#isValid()', function(){
-  var User = model('User')
+  var User = Model('User')
     .attr('name')
     .attr('email');
 

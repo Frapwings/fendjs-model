@@ -4,7 +4,8 @@
   "description": "Elegant data models for Fend.js",
   "devDependencies": {
     "express": "3.0.0",
-    "component": "~0.18.0"
+    "component": "~0.18.0",
+    "mocha-phantomjs": "~3.1.5"
   },
   "repository": {
     "type": "git",

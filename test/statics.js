@@ -1,8 +1,7 @@
-
-var model = require('fendjs-model');
+var Model = require('fendjs-model');
 var assert = require('assert');
 
-var User = model('User')
+var User = Model('User')
   .attr('id', { type: 'number' })
   .attr('name', { type: 'string' })
   .attr('age', { type: 'number' })
