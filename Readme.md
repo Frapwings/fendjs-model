@@ -6,13 +6,13 @@
 
 ## API
 
-### model(name)
+### Model(name)
 
   Create a new model with the given `name`.
 
 ```js
-var model = require('model');
-var User = model('User');
+var Model = require('fendjs-model');
+var User = Model('User');
 ```
 
 ### .attr(name, [meta])
@@ -20,9 +20,9 @@ var User = model('User');
   Define an attribute `name` with optional `meta` data object.
 
 ```js
-var model = require('model');
+var Model = require('fendjs-model');
 
-var Post = model('Post')
+var Post = Model('Post')
   .attr('id')
   .attr('title')
   .attr('body')
@@ -33,9 +33,9 @@ var Post = model('Post')
   With meta data used by plugins:
 
 ```js
-var model = require('model');
+var Model = require('fendjs-model');
 
-var Post = model('Post')
+var Post = Model('Post')
   .attr('id', { required: true, type: 'number' })
   .attr('title', { required: true, type: 'string' })
   .attr('body', { required: true, type: 'string' })
@@ -94,7 +94,7 @@ User.headers({
   "Getter" function generated when `Model.attr(name)` is called.
 
 ```js
-var Post = model('Post')
+var Post = Model('Post')
   .attr('title')
   .attr('body')
 
@@ -108,7 +108,7 @@ post.body('Make really good pets')
   "Setter" function generated when `Model.attr(name)` is called.
 
 ```js
-var Post = model('Post')
+var Post = Model('Post')
   .attr('title')
   .attr('body')
 
