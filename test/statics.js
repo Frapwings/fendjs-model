@@ -1,5 +1,5 @@
 
-var model = require('model');
+var model = require('fendjs-model');
 var assert = require('assert');
 
 var User = model('User')

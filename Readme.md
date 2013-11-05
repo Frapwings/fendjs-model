@@ -1,7 +1,8 @@
+# fendjs-model
 
-# model
+[![Build Status](https://travis-ci.org/Frapwings/fendjs-model.png?branch=master)](https://travis-ci.org/Frapwings/fendjs-model)
 
-  W.I.P minimalistic extensible model component.
+  Minimalistic extensible model component for Fend.js.
 
 ## API
 
@@ -220,9 +221,11 @@ user.save(function(err){
 ```
 $ npm install
 $ make test &
-$ open http://localhost:3000
+$ open http://localhost:4000
 ```
 
 # License
 
-  MIT
+[MIT license](http://www.opensource.org/licenses/mit-license.php).
+
+See the `LICENSE`.
