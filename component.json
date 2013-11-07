@@ -23,6 +23,7 @@
   },
   "scripts": [
     "lib/loader.js",
+    "lib/fetcher.js",
     "lib/index.js",
     "lib/static.js",
     "lib/proto.js"
