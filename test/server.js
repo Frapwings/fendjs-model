@@ -90,14 +90,23 @@ app.get('/users', function(req, res){
 });
 
 /**
+ * GET user :id.
+ */
+
+app.get('/users/:id', function(req, res){
+  var user = db.users[req.params.id];
+  if (!user) return res.send(404, 'cant find user');
+  res.send(user);
+});
+
+/**
  * POST a new user.
  */
 
 app.post('/users', function(req, res){
   var user = req.body;
-  var id = db.users.push(user) - 1;
-  user.id = id;
-  res.send({ id: id });
+  user.id = db.users.push(user) - 1;
+  res.send(user);
 });
 
 app.listen(4000);

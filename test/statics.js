@@ -28,10 +28,6 @@ describe('Model.attrs', function(){
 
 describe('Model.all(fn)', function(){
   beforeEach(function(done){
-    User.destroyAll(done);
-  });
-
-  beforeEach(function(done){
     var tobi = new User({ name: 'tobi', age: 2 });
     var loki = new User({ name: 'loki', age: 1 });
     var jane = new User({ name: 'jane', age: 8 });
@@ -41,6 +37,10 @@ describe('Model.all(fn)', function(){
       });
     });
   })
+
+  afterEach(function(done){
+    User.destroyAll(done);
+  });
 
   it('should respond with a collection of all', function(done){
     User.all(function(err, users, res){
@@ -56,9 +56,33 @@ describe('Model.all(fn)', function(){
   })
 })
 
+describe('Model.get(id, fn)', function () {
+  it('should error', function (done) {
+    User.get('foo', function (err, model, res) {
+      assert(err);
+      assert(null == model);
+      assert(res);
+      done();
+    });
+  });
+
+  it('should get a model', function (done) {
+    var tobi = new User({ name: 'tobi', age: 2 });
+    tobi.save(function () {
+      User.get(tobi.id(), function (err, model, res) {
+        assert(!err);
+        assert(res);
+        assert(tobi.name() === model.name());
+        done();
+      });
+    });
+  });
+});
+
 describe('Model.route(string)', function(){
   it('should set the base path for url', function(){
     User.route('/api/u');
     assert('/api/u/edit' == User.url('edit'));
   })
 })
+
