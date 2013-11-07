@@ -22,6 +22,7 @@
     "component/domify": "*"
   },
   "scripts": [
+    "lib/loader.js",
     "lib/index.js",
     "lib/static.js",
     "lib/proto.js"

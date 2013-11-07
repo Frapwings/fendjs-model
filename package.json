@@ -2,11 +2,6 @@
   "name": "fendjs-model",
   "version": "0.0.1",
   "description": "Elegant data models for Fend.js",
-  "devDependencies": {
-    "express": "3.0.0",
-    "component": "~0.18.0",
-    "mocha-phantomjs": "~3.1.5"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/Frapwings/fendjs-model.git"
@@ -24,10 +19,15 @@
     "database"
   ],
   "dependencies": {
-    "each-component": "~0.0.1",
+    "each-component": "git://github.com/component/each.git#master",
     "fendjs-collection": "~0.0.3",
     "emitter-component": "~1.0.1",
     "superagent": "~0.15.7"
+  },
+  "devDependencies": {
+    "express": "3.0.0",
+    "component": "~0.18.0",
+    "mocha-phantomjs": "~3.1.5"
   },
   "main": "lib/index.js",
   "scripts": {
