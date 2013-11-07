@@ -15,7 +15,7 @@ var Model = require('fendjs-model');
 var User = Model('User');
 ```
 
-### .attr(name, [meta])
+### Model.attr(name, [meta])
 
   Define an attribute `name` with optional `meta` data object.
 
@@ -43,15 +43,15 @@ var Post = Model('Post')
   .attr('updated_at', { type: 'date' })
 ```
 
-### .validate(fn)
+### Model.validate(fn)
 
   TODO: validation callback docs
 
-### .use(fn)
+### Model.use(fn)
 
   TODO: plugin docs
 
-### .url([path])
+### Model.url([path])
 
   Return base url, or url to `path`.
 
@@ -63,7 +63,7 @@ User.url('add')
 // => "/users/add"
 ```
 
-### .route(path)
+### Model.route(path)
 
   Set base path for urls.
   Note this is defaulted to `'/' + modelName.toLowerCase() + 's'`
@@ -78,7 +78,7 @@ User.url('add')
 // => "/api/u/add"
 ```
  
-### .headers({header: value})
+### Model.headers({header: value})
 
   Sets custom headers for static and method requests on the model.
 
@@ -89,7 +89,19 @@ User.headers({
 });
 ```
 
-### .ATTR()
+### Model.get(id, fn)
+
+  TODO: get docs
+
+### Model.all(fn)
+
+  TODO: all docs
+
+### Model.destroyAll(fn)
+
+  TODO: destroyall docs
+
+### Model#ATTR()
 
   "Getter" function generated when `Model.attr(name)` is called.
 
@@ -103,7 +115,7 @@ post.title('Ferrets')
 post.body('Make really good pets')
 ```
 
-### .ATTR(value)
+### Model#ATTR(value)
 
   "Setter" function generated when `Model.attr(name)` is called.
 
@@ -136,23 +148,27 @@ post.on('change title', function(val, prev){
 
 ```
 
-### .isNew()
+### Model#primary(val)
+
+  TODO: primary docs
+
+### Model#isNew()
 
   Returns `true` if the model is unsaved.
 
-### .toJSON()
+### Model#toJSON()
 
   Return a JSON representation of the model (its attributes).
 
-### .has(attr)
+### Model#has(attr)
 
   Check if `attr` is non-`null`.
 
-### .get(attr)
+### Model#get(attr)
 
   Get `attr`'s value.
 
-### .set(attrs)
+### Model#set(attrs)
 
   Set multiple `attrs`.
 
@@ -160,17 +176,17 @@ post.on('change title', function(val, prev){
 user.set({ name: 'Tobi', age: 2 })
 ```
 
-### .changed([attr])
+### Model#changed([attr])
 
   Check if the model is "dirty" and return an object
   of changed attributes. Optionally check a specific `attr`
   and return a `Boolean`.
 
-### .error(attr, msg)
+### Model#error(attr, msg)
 
   Define error `msg` for `attr`.
 
-### .isValid()
+### Model#isValid()
 
   Run validations and check if the model is valid.
 
@@ -182,7 +198,7 @@ user.errors
 // => [{ attr: ..., message: ... }]
 ```
 
-### .url([path])
+### Model#url([path])
 
   Return this model's base url or relative to `path`:
 
@@ -192,7 +208,7 @@ user.url('edit');
 // => "/users/5/edit"
 ```
 
-### .save(fn)
+### Model#save(fn)
 
   Save or update and invoke the given callback `fn(err)`.
 
@@ -206,7 +222,7 @@ user.save(function(err){
 
   Emits "save" when complete.
 
-### .destroy([fn])
+### Model#destroy([fn])
 
   Destroy and invoke optional `fn(err)`.
 
@@ -220,8 +236,7 @@ user.save(function(err){
 
 ```
 $ npm install
-$ make test &
-$ open http://localhost:4000
+$ make test-phantomjs
 ```
 
 # License
