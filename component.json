@@ -24,6 +24,8 @@
   "scripts": [
     "lib/loader.js",
     "lib/fetcher.js",
+    "lib/rest/static.js",
+    "lib/rest/proto.js",
     "lib/index.js",
     "lib/static.js",
     "lib/proto.js"

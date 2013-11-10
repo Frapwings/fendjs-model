@@ -6,13 +6,25 @@
 
 ## API
 
-### Model(name)
+### Modeler(name)
 
   Create a new model with the given `name`.
 
 ```js
-var Model = require('fendjs-model');
-var User = Model('User');
+var Modeler = require('fendjs-model');
+var User = Modeler('User');
+```
+
+### Modeler.use(fn)
+
+    Use the given plugin `fn()` on all model.
+    
+```js
+var Modeler = require('fendjs-model');
+Modeler.use(function (Model) {
+  Model.attr('created_at', { type: 'date' });
+  Model.attr('updated_at', { type: 'date' });
+});
 ```
 
 ### Model.attr(name, [meta])
@@ -20,9 +32,9 @@ var User = Model('User');
   Define an attribute `name` with optional `meta` data object.
 
 ```js
-var Model = require('fendjs-model');
+var Modeler = require('fendjs-model');
 
-var Post = Model('Post')
+var Post = Modeler('Post')
   .attr('id')
   .attr('title')
   .attr('body')
@@ -33,9 +45,9 @@ var Post = Model('Post')
   With meta data used by plugins:
 
 ```js
-var Model = require('fendjs-model');
+var Modeler = require('fendjs-model');
 
-var Post = Model('Post')
+var Post = Modeler('Post')
   .attr('id', { required: true, type: 'number' })
   .attr('title', { required: true, type: 'string' })
   .attr('body', { required: true, type: 'string' })
@@ -49,7 +61,16 @@ var Post = Model('Post')
 
 ### Model.use(fn)
 
-  TODO: plugin docs
+  Use the given plugin `fn()`.
+
+```js
+var Modeler = require('fendjs-model');
+var Post = Modeler('Post')
+Post.use(function (Model) {
+  Model.attr('created_at', { type: 'date' });
+  Model.attr('updated_at', { type: 'date' });
+});
+```
 
 ### Model.url([path])
 
@@ -106,7 +127,7 @@ User.headers({
   "Getter" function generated when `Model.attr(name)` is called.
 
 ```js
-var Post = Model('Post')
+var Post = Modeler('Post')
   .attr('title')
   .attr('body')
 
@@ -120,7 +141,7 @@ post.body('Make really good pets')
   "Setter" function generated when `Model.attr(name)` is called.
 
 ```js
-var Post = Model('Post')
+var Post = Modeler('Post')
   .attr('title')
   .attr('body')
 
@@ -228,15 +249,11 @@ user.save(function(err){
 
   Emits "destroy" when successfully deleted.
 
-## Links
-
-  - [Plugins](https://github.com/component/model/wiki/Plugins) for model
-
 ## Testing
 
 ```
 $ npm install
-$ make test-phantomjs
+$ make test-phantomjst 
 ```
 
 # License
