@@ -110,10 +110,10 @@ describe('Model#isNew()', function(){
 describe('Model#model', function(){
   it('should reference the constructor', function(){
     var user = new User;
-    assert(User == user.model);
+    assert(User == user.Model);
 
     var pet = new Pet;
-    assert(Pet == pet.model);
+    assert(Pet == pet.Model);
   })
 })
 
