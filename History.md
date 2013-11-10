@@ -1,7 +1,13 @@
+v0.0.3 / 2013-11-11
+==================
+
+  * Release v0.0.3
+  * Refactor model module structure
+
 v0.0.2 / 2013-11-08
 ==================
 
-  * Release v0.0.1
+  * Release v0.0.2
   * Refactor module loading
   * Update document
   * Added tests
