@@ -1,6 +1,6 @@
 {
   "name": "fendjs-model",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Elegant data models for Fend.js",
   "repository": {
     "type": "git",
@@ -12,6 +12,8 @@
     "url": "https://github.com/Frapwings/fendjs-model/issues"
   },
   "keywords": [
+    "fend.js",
+    "isomorphic",
     "collection",
     "model",
     "orm",
@@ -21,11 +23,11 @@
   "dependencies": {
     "each-component": "git://github.com/component/each.git#master",
     "fendjs-collection": "~0.0.3",
-    "emitter-component": "~1.0.1",
+    "emitter-component": "~1.1.0",
     "superagent": "~0.15.7"
   },
   "devDependencies": {
-    "express": "3.0.0",
+    "express": "~3.4.0",
     "component": "~0.18.0",
     "mocha-phantomjs": "~3.1.5"
   },

@@ -1,9 +1,12 @@
 {
   "name": "fendjs-model",
   "repo": "Frapwings/fendjs-model",
+  "version": "0.0.4",
   "description": "Elegant data models for Fend.js",
-  "version": "0.0.3",
+  "license": "MIT",
   "keywords": [
+    "fend.js",
+    "isomorphic",
     "collection",
     "model",
     "orm",
@@ -30,6 +33,5 @@
     "lib/static.js",
     "lib/proto.js"
   ],
-  "main": "lib/index.js",
-  "license": "MIT"
+  "main": "lib/index.js"
 }

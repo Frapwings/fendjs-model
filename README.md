@@ -2,22 +2,22 @@
 
 [![Build Status](https://travis-ci.org/Frapwings/fendjs-model.png?branch=master)](https://travis-ci.org/Frapwings/fendjs-model)
 
-  Minimalistic extensible model component for Fend.js.
+Minimalistic extensible model component for Fend.js.
 
-## API
+# API
 
-### Modeler(name)
+## Modeler(name)
 
-  Create a new model with the given `name`.
+Create a new model with the given `name`.
 
 ```js
 var Modeler = require('fendjs-model');
 var User = Modeler('User');
 ```
 
-### Modeler.use(fn)
+## Modeler.use(fn)
 
-    Use the given plugin `fn()` on all model.
+Use the given plugin `fn()` on all model.
     
 ```js
 var Modeler = require('fendjs-model');
@@ -27,9 +27,9 @@ Modeler.use(function (Model) {
 });
 ```
 
-### Model.attr(name, [meta])
+## Model.attr(name, [meta])
 
-  Define an attribute `name` with optional `meta` data object.
+Define an attribute `name` with optional `meta` data object.
 
 ```js
 var Modeler = require('fendjs-model');
@@ -42,7 +42,7 @@ var Post = Modeler('Post')
   .attr('updated_at')
 ```
 
-  With meta data used by plugins:
+With meta data used by plugins:
 
 ```js
 var Modeler = require('fendjs-model');
@@ -55,13 +55,13 @@ var Post = Modeler('Post')
   .attr('updated_at', { type: 'date' })
 ```
 
-### Model.validate(fn)
+## Model.validate(fn)
 
-  TODO: validation callback docs
+TODO: validation callback docs
 
-### Model.use(fn)
+## Model.use(fn)
 
-  Use the given plugin `fn()`.
+Use the given plugin `fn()`.
 
 ```js
 var Modeler = require('fendjs-model');
@@ -72,9 +72,9 @@ Post.use(function (Model) {
 });
 ```
 
-### Model.url([path])
+## Model.url([path])
 
-  Return base url, or url to `path`.
+Return base url, or url to `path`.
 
 ```js
 User.url()
@@ -84,10 +84,10 @@ User.url('add')
 // => "/users/add"
 ```
 
-### Model.route(path)
+## Model.route(path)
 
-  Set base path for urls.
-  Note this is defaulted to `'/' + modelName.toLowerCase() + 's'`
+Set base path for urls.
+Note this is defaulted to `'/' + modelName.toLowerCase() + 's'`
 
 ```js
 User.route('/api/u')
@@ -99,9 +99,9 @@ User.url('add')
 // => "/api/u/add"
 ```
  
-### Model.headers({header: value})
+## Model.headers({header: value})
 
-  Sets custom headers for static and method requests on the model.
+Sets custom headers for static and method requests on the model.
 
 ```js  
 User.headers({
@@ -110,21 +110,21 @@ User.headers({
 });
 ```
 
-### Model.get(id, fn)
+## Model.get(id, fn)
 
-  TODO: get docs
+TODO: get docs
 
-### Model.all(fn)
+## Model.all(fn)
 
-  TODO: all docs
+TODO: all docs
 
-### Model.destroyAll(fn)
+## Model.destroyAll(fn)
 
-  TODO: destroyall docs
+TODO: destroyall docs
 
-### Model#ATTR()
+## Model#ATTR()
 
-  "Getter" function generated when `Model.attr(name)` is called.
+"Getter" function generated when `Model.attr(name)` is called.
 
 ```js
 var Post = Modeler('Post')
@@ -136,9 +136,9 @@ post.title('Ferrets')
 post.body('Make really good pets')
 ```
 
-### Model#ATTR(value)
+## Model#ATTR(value)
 
-  "Setter" function generated when `Model.attr(name)` is called.
+"Setter" function generated when `Model.attr(name)` is called.
 
 ```js
 var Post = Modeler('Post')
@@ -155,8 +155,8 @@ post.title()
 // => "Ferrets"
 ```
 
-  - Emits "change" event with `(name, value, previousValue)`.
-  - Emits "change ATTR" event with `(value, previousValue)`.
+- Emits "change" event with `(name, value, previousValue)`.
+- Emits "change ATTR" event with `(value, previousValue)`.
 
 ```js
 post.on('change', function(name, val, prev){
@@ -169,47 +169,45 @@ post.on('change title', function(val, prev){
 
 ```
 
-### Model#primary(val)
+## Model#primary(val)
 
-  TODO: primary docs
+TODO: primary docs
 
-### Model#isNew()
+## Model#isNew()
 
-  Returns `true` if the model is unsaved.
+Returns `true` if the model is unsaved.
 
-### Model#toJSON()
+## Model#toJSON()
 
-  Return a JSON representation of the model (its attributes).
+Return a JSON representation of the model (its attributes).
 
-### Model#has(attr)
+## Model#has(attr)
 
-  Check if `attr` is non-`null`.
+Check if `attr` is non-`null`.
 
-### Model#get(attr)
+## Model#get(attr)
 
-  Get `attr`'s value.
+Get `attr`'s value.
 
-### Model#set(attrs)
+## Model#set(attrs)
 
-  Set multiple `attrs`.
+Set multiple `attrs`.
 
 ```js
 user.set({ name: 'Tobi', age: 2 })
 ```
 
-### Model#changed([attr])
+## Model#changed([attr])
 
-  Check if the model is "dirty" and return an object
-  of changed attributes. Optionally check a specific `attr`
-  and return a `Boolean`.
+Check if the model is "dirty" and return an object of changed attributes. Optionally check a specific `attr` and return a `Boolean`.
 
-### Model#error(attr, msg)
+## Model#error(attr, msg)
 
-  Define error `msg` for `attr`.
+Define error `msg` for `attr`.
 
-### Model#isValid()
+## Model#isValid()
 
-  Run validations and check if the model is valid.
+Run validations and check if the model is valid.
 
 ```js
 user.isValid()
@@ -219,9 +217,9 @@ user.errors
 // => [{ attr: ..., message: ... }]
 ```
 
-### Model#url([path])
+## Model#url([path])
 
-  Return this model's base url or relative to `path`:
+Return this model's base url or relative to `path`:
 
 ```js
 var user = new User({ id: 5 });
@@ -229,9 +227,9 @@ user.url('edit');
 // => "/users/5/edit"
 ```
 
-### Model#save(fn)
+## Model#save(fn)
 
-  Save or update and invoke the given callback `fn(err)`.
+Save or update and invoke the given callback `fn(err)`.
 
 ```js
 var user = new User({ name: 'Tobi' })
@@ -241,15 +239,15 @@ user.save(function(err){
 })
 ```
 
-  Emits "save" when complete.
+Emits "save" when complete.
 
-### Model#destroy([fn])
+## Model#destroy([fn])
 
-  Destroy and invoke optional `fn(err)`.
+Destroy and invoke optional `fn(err)`.
 
-  Emits "destroy" when successfully deleted.
+Emits "destroy" when successfully deleted.
 
-## Testing
+# Testing
 
 ```
 $ npm install
