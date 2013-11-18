@@ -1,6 +1,6 @@
 # fendjs-model
 
-[![Build Status](https://travis-ci.org/Frapwings/fendjs-model.png?branch=master)](https://travis-ci.org/Frapwings/fendjs-model)
+[![Build Status](https://travis-ci.org/Frapwings/fendjs-model.png?branch=master)](https://travis-ci.org/Frapwings/fendjs-model) [![Coverage Status](https://coveralls.io/repos/Frapwings/fendjs-model/badge.png)](https://coveralls.io/r/Frapwings/fendjs-model) [![NPM version](https://badge.fury.io/js/fendjs-model.png)](http://badge.fury.io/js/fendjs-model) [![Dependency Status](https://david-dm.org/Frapwings/fendjs-model.png)](https://david-dm.org/Frapwings/fendjs-model)
 
 Minimalistic extensible model component for Fend.js.
 
@@ -69,44 +69,6 @@ var Post = Modeler('Post')
 Post.use(function (Model) {
   Model.attr('created_at', { type: 'date' });
   Model.attr('updated_at', { type: 'date' });
-});
-```
-
-## Model.url([path])
-
-Return base url, or url to `path`.
-
-```js
-User.url()
-// => "/users"
-
-User.url('add')
-// => "/users/add"
-```
-
-## Model.route(path)
-
-Set base path for urls.
-Note this is defaulted to `'/' + modelName.toLowerCase() + 's'`
-
-```js
-User.route('/api/u')
-
-User.url()
-// => "/api/u"
-
-User.url('add')
-// => "/api/u/add"
-```
- 
-## Model.headers({header: value})
-
-Sets custom headers for static and method requests on the model.
-
-```js  
-User.headers({
-  'X-CSRF-Token': 'some token',
-  'X-API-Token': 'api token 
 });
 ```
 
@@ -215,16 +177,6 @@ user.isValid()
 
 user.errors
 // => [{ attr: ..., message: ... }]
-```
-
-## Model#url([path])
-
-Return this model's base url or relative to `path`:
-
-```js
-var user = new User({ id: 5 });
-user.url('edit');
-// => "/users/5/edit"
 ```
 
 ## Model#save(fn)
