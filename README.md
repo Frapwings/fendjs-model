@@ -57,7 +57,7 @@ var Post = Modeler('Post')
 
 ## Model.validate(fn)
 
-TODO: validation callback docs
+Add validation `fn()`.
 
 ## Model.use(fn)
 
@@ -74,15 +74,15 @@ Post.use(function (Model) {
 
 ## Model.get(id, fn)
 
-TODO: get docs
+Get `id` and invoke `fn(err, model)`.
 
 ## Model.all(fn)
 
-TODO: all docs
+Get all and invoke `fn(err, model)`.
 
 ## Model.destroyAll(fn)
 
-TODO: destroyall docs
+Remove all and invoke `fn(err)`.
 
 ## Model#ATTR()
 
@@ -133,7 +133,7 @@ post.on('change title', function(val, prev){
 
 ## Model#primary(val)
 
-TODO: primary docs
+Get / set the primary key.
 
 ## Model#isNew()
 
@@ -203,7 +203,7 @@ Emits "destroy" when successfully deleted.
 
 ```
 $ npm install
-$ make test-phantomjst 
+$ make test
 ```
 
 # License
