@@ -16,8 +16,9 @@
   "dependencies": {
     "component/each": "0.0.1",
     "component/emitter": "1.0.1",
+    "component/object": "*",
     "Frapwings/fendjs-collection": "*",
-    "visionmedia/superagent": "0.15.1"
+    "broofa/node-uuid": "*"
   },
   "development": {
     "component/reactive": "0.13.0",
@@ -27,11 +28,10 @@
   "scripts": [
     "lib/loader.js",
     "lib/fetcher.js",
-    "lib/rest/static.js",
-    "lib/rest/proto.js",
-    "lib/index.js",
     "lib/static.js",
-    "lib/proto.js"
+    "lib/proto.js",
+    "lib/index.js"
   ],
-  "main": "lib/index.js"
+  "main": "lib/index.js",
+  "remotes": []
 }
