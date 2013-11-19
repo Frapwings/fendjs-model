@@ -22,13 +22,6 @@ var Pet = Modeler('Pet')
   .use(required('name'));
 
 
-describe('Modeler(name)', function () {
-  it('should return a new model constructor', function () {
-    var Something = Modeler('Something');
-    assert('function' == typeof Something);
-  })
-})
-
 describe('new Model(object)', function () {
   it('should populate attrs', function () {
     var user = new User({ name: 'Tobi', age: 2 });
@@ -388,4 +381,30 @@ describe('Model#destroy()', function () {
       });
     })
   })
+})
+
+describe('Model#changed(attr)', function () {
+  describe('no dirty', function () {
+    it('should return "false"', function () {
+      var pet = new Pet();
+      assert(!pet.changed());
+    });
+  });
+
+  describe('dirty', function () {
+    describe('no specify attr', function () {
+      it('should return dirty object', function () {
+        var pet = new Pet({ name: 'Tobi' });
+        var obj = pet.changed();
+        assert(obj.name === 'Tobi');
+      });
+    });
+
+    describe('specify attr', function () {
+      it('should return bool value', function () {
+        var pet = new Pet({ name: 'Tobi' });
+        assert(true === pet.changed('name'));
+      });
+    });
+  });
 })

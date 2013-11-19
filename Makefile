@@ -9,7 +9,8 @@ components: component.json
 	@$(COMPONENT) install --dev
 
 test:
-	@NODE_ENV=test ./node_modules/.bin/mocha --reporter $(REPORTER) ./test/model.js ./test/statics.js
+	@NODE_ENV=test ./node_modules/.bin/mocha --reporter $(REPORTER) \
+		./test/modeler.js ./test/model.js ./test/statics.js
 
 test-phantom: build
 	@./node_modules/.bin/mocha-phantomjs ./test/index.html
