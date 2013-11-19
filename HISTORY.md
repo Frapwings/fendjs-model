@@ -1,26 +1,25 @@
-v0.0.4 / 2013-11-15
-==================
+# v0.0.5 / 2013-11-20
 
-  * Fixed Modeler.use bug
+* Modified mode interface (move RESTful interface to fendjs-modele-resful)
 
-v0.0.3 / 2013-11-11
-==================
+# v0.0.4 / 2013-11-15
 
-  * Refactor model module structure
+* Fixed Modeler.use bug
 
-v0.0.2 / 2013-11-08
-==================
+# v0.0.3 / 2013-11-11
 
-  * Refactor module loading
-  * Update document
-  * Added tests
+* Refactor model module structure
 
-v0.0.1 / 2013-11-05
-==================
+# v0.0.2 / 2013-11-08
 
-  * Fixed test
+* Refactor module loading
+* Update document
+* Added tests
 
-v0.0.0 / 2013-11-05
-==================
+# v0.0.1 / 2013-11-05
 
-  * Initial project (Fork https://github.com/component/model)
+* Fixed test
+
+# v0.0.0 / 2013-11-05
+
+* Initial project (Fork https://github.com/component/model)

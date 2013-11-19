@@ -1,7 +1,7 @@
 {
   "name": "fendjs-model",
   "repo": "Frapwings/fendjs-model",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Elegant data models for Fend.js",
   "license": "MIT",
   "keywords": [
