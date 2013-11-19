@@ -16,14 +16,14 @@
       <p>{name} is a {age} year old {profession} with {petCount} pets.</p>
     </div>
 
-    <script src="../../build/build.js"></script>
+    <script src="../../test/build.js"></script>
 
     <script>
       var el = document.querySelector('.user');
       var reactive = require('reactive');
-      var model = require('model');
+      var Modeler = require('fendjs-model');
 
-      var User = model('User')
+      var User = Modeler('User')
         .attr('name')
         .attr('age')
         .attr('profession')
