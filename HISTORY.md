@@ -1,3 +1,7 @@
+# v0.0.7 / 2013-11-24
+
+* Change fetcher using method
+
 # v0.0.6 / 2013-11-24
 
 * Modified fetcher setup

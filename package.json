@@ -1,6 +1,6 @@
 {
   "name": "fendjs-model",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Elegant data models for Fend.js",
   "repository": {
     "type": "git",
