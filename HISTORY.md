@@ -1,3 +1,7 @@
+# v0.0.6 / 2013-11-24
+
+* Modified fetcher setup
+
 # v0.0.5 / 2013-11-20
 
 * Modified mode interface (move RESTful interface to fendjs-modele-resful)
