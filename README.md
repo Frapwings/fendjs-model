@@ -213,3 +213,7 @@ $ make test
 See the `LICENSE`.
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Frapwings/fendjs-model/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Frapwings/fendjs-model/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
